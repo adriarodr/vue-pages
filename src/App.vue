@@ -6,7 +6,7 @@
     <p v-if="loading">Loading...</p>
 
     <p v-else>"{{ quote }}"</p>
-    <p class="author">- {{ author }}</p>
+    <p class="author">— {{ author }}</p>
 
     <!-- The button that triggers the API call -->
     <button @click="getQuote">Get New Quote</button>
@@ -62,30 +62,41 @@
 </script>
 
 <style>
-  .constainer {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 50px;
+  body {
+    background-color: #d6edd6;
   }
 
-  button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-  }
+  .container {
+      background-color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      width: 65%;
+      max-width: 850px;
+      margin: 3.125rem auto;
+      padding: 3.25rem 4rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
 
-  .author {
-    font-style: italic;
-    color: #555;
-    margin-top: 5px;
-  }
+    button {
+      margin-top: 1.25rem;
+      padding: 0.625rem 1.25rem;
+      font-size: 1rem;
+      background-color: #3a3d5c;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+    }
 
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-  }
+    button:hover {
+      background-color: #151621;
+      color: #ffffff;
+      transition: background-color 0.5s ease;
+    }
+
+    .author {
+      font-style: italic;
+      color: #545454;
+      margin-top: 0.313rem;
+    }
 </style>
